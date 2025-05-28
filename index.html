@@ -5,14 +5,19 @@
   <title>Zero Truster - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+  <script src="js/time.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <h1>Zero Truster</h1>
     <nav>
-      <fluent-button appearance="accent" as="a" href="index.html">Home</fluent-button>
-      <fluent-button appearance="accent" as="a" href="about.html">About</fluent-button>
+      <a href="index.html" class="link-wrapper">
+        <fluent-button href="index.html">Home</fluent-button>
+      </a>
+      <a href="about.html" class="link-wrapper">
+        <fluent-button href="about.html">About</fluent-button>
+      </a>
     </nav>
   </header>
   <main class="container">
@@ -39,6 +44,5 @@
   <footer>
     <p>&copy; <span id="currentTime"></span> zerotruster.com</p>
   </footer>
-  <script src="../../../../js/time.js"></script>
 </body>
 </html>
