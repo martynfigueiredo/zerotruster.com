@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <title>Zero Truster - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Import Fluent UI Web Components -->
   <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
-  <!-- External CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,32 +15,26 @@
       <fluent-button appearance="accent" as="a" href="about.html">About</fluent-button>
     </nav>
   </header>
-  <main class="homepage-main">
+  <main class="container">
     <!-- 2025 Blog Posts -->
     <section class="year-section" id="2025">
       <h2>2025</h2>
-      <a class="card-link" href="posts/2025/may/28/welcome/welcome.html">
-  <fluent-card>
-    <h3>Welcome.</h3>
-    <p>A journey into the unheard depths of truth.</p>
-  </fluent-card>
-</a>
-        <fluent-card as="a" href="posts/2025/may/post2.html">
-          <h3>Echoes of Resistance</h3>
-          <p>An exploration of defiance and resilience.</p>
-        </fluent-card>
-      </div>
-    </section>
-    <!-- 2024 Blog Posts (Sample older post) -->
-    <section class="year-section" id="2024">
-      <h2>2024</h2>
       <div class="blog-posts">
-        <fluent-card as="a" href="#">
-          <h3>Reflections in Chaos</h3>
-          <p>Insights from a journey through turmoil.</p>
-        </fluent-card>
+        <a class="card-link" href="posts/2025/may/28/welcome/welcome.html">
+          <fluent-card>
+            <h3>Welcome.</h3>
+            <p>A journey into the unheard depths of truth.</p>
+          </fluent-card>
+        </a>
+        <a class="card-link" href="posts/2025/may/post2.html">
+          <fluent-card>
+            <h3>Echoes of Resistance</h3>
+            <p>An exploration of defiance and resilience.</p>
+          </fluent-card>
+        </a>
       </div>
     </section>
+    <!-- Add more sections as needed -->
   </main>
   <footer>
     <p>&copy; <span id="currentTime"></span> zerotruster.com</p>
