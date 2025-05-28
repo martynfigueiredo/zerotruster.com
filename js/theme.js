@@ -1,22 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const themeSwitch = document.getElementById('themeSwitch');
-  if (!themeSwitch) return;
+  const themeToggle = document.getElementById('themeToggle');
+  if (!themeToggle) return;
 
   // Check local storage for saved theme preference
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
-    themeSwitch.checked = true;
+    themeToggle.textContent = "☀️"; // Show sun icon (click this to switch to light)
+  } else {
+    themeToggle.textContent = "🌙"; // Show moon icon (click this to switch to dark)
   }
 
-  // Listen for changes to the toggle (Fluent UI switch fires a 'change' event)
-  themeSwitch.addEventListener('change', () => {
-    if (themeSwitch.checked) {
-      document.body.classList.add('dark-mode');
-      localStorage.setItem('theme', 'dark');
-    } else {
+  themeToggle.addEventListener('click', () => {
+    if (document.body.classList.contains('dark-mode')) {
+      // Switch to light mode
       document.body.classList.remove('dark-mode');
       localStorage.setItem('theme', 'light');
+      themeToggle.textContent = "🌙";
+    } else {
+      // Switch to dark mode
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+      themeToggle.textContent = "☀️";
     }
   });
 });
