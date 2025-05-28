@@ -12,7 +12,7 @@ function getUTCTime() {
   var hours = pad(now.getUTCHours());
   var minutes = pad(now.getUTCMinutes());
   var seconds = pad(now.getUTCSeconds());
-  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds} UTC0`;
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds} UTC+0`;
 }
 
 // Once the DOM is fully loaded, update the element with id "currentTime"
