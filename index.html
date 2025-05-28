@@ -6,61 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Import Fluent UI Web Components -->
   <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
-  <style>
-    body { 
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f3f2f1;
-    }
-    header { 
-      background-color: #0078d4; 
-      color: #fff; 
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header h1 { 
-      margin: 0;
-      font-size: 1.8rem;
-    }
-    nav { 
-      display: flex;
-      gap: 1rem;
-    }
-    main {
-      padding: 1rem;
-    }
-    .year-section {
-      margin: 2rem 0;
-    }
-    .year-section h2 {
-      margin-bottom: 1rem;
-    }
-    .blog-posts {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-    }
-    /* Use Fluent UI cards for blog post previews */
-    fluent-card {
-      display: block;
-      padding: 1rem;
-      text-decoration: none;
-      color: inherit;
-      transition: box-shadow 0.3s ease;
-    }
-    fluent-card:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #f3f2f1;
-      color: #333;
-    }
-  </style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -70,16 +17,16 @@
       <fluent-button appearance="accent" as="a" href="about.html">About</fluent-button>
     </nav>
   </header>
-  <main>
+  <main class="homepage-main">
     <!-- 2025 Blog Posts -->
     <section class="year-section" id="2025">
       <h2>2025</h2>
       <div class="blog-posts">
-        <fluent-card as="a" href="post1.html">
+        <fluent-card as="a" href="posts/2025/may/post1.html">
           <h3>Breaking the Silence</h3>
           <p>A journey into the unheard depths of truth.</p>
         </fluent-card>
-        <fluent-card as="a" href="post2.html">
+        <fluent-card as="a" href="posts/2025/may/post2.html">
           <h3>Echoes of Resistance</h3>
           <p>An exploration of defiance and resilience.</p>
         </fluent-card>
