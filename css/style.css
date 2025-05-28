@@ -1,21 +1,3 @@
-/* CSS Variables for Light Mode */
-:root {
-  --background-color: #f3f2f1;
-  --text-color: #333;
-  --header-background: #0078d4;
-  --footer-background: #f3f2f1;
-  --card-background: #fff;
-}
-
-/* Dark Mode Overrides */
-.dark-mode {
-  --background-color: #2e2e2e;
-  --text-color: #f3f2f1;
-  --header-background: #000;
-  --footer-background: #2e2e2e;
-  --card-background: #444;
-}
-
 /* Global Styles */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -63,6 +45,14 @@ fluent-card {
 
 fluent-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Wrapper styling for clickable cards */
+/* Use this class on an anchor element wrapping your <fluent-card> */
+a.card-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit;        /* Inherit the parent text color */
+  display: block;        /* Ensure the link is treated as a block element */
 }
 
 /* Homepage-specific styles */
