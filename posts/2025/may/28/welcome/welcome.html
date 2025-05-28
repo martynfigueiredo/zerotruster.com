@@ -2,12 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Zero Truster - Welcoming</title>
+  <title>Zero Truster - Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Import Fluent UI Web Components -->
   <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
-  <!-- External CSS: note the relative path (four levels up to reach /css/style.css) -->
+  <!-- External CSS: adjust the relative path as needed -->
   <link rel="stylesheet" href="../../../../css/style.css">
+  
+  <!-- Register custom Fluent icons for GitHub and X -->
+  <script type="module">
+    import { provideFluentDesignSystem, registerIconFromText } from '@fluentui/web-components';
+
+    // Initialize Fluent UI Design System
+    provideFluentDesignSystem();
+
+    // Register a custom icon for GitHub
+    registerIconFromText('github', `
+      <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
+             0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+             -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 
+             2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+             0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 
+             1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 
+             2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 
+             0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 
+             1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    `);
+
+    // Register a custom icon for X (x.com)
+    registerIconFromText('x', `
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2"/>
+        <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    `);
+  </script>
 </head>
 <body>
   <header>
@@ -16,35 +49,20 @@
       <fluent-button appearance="accent" as="a" href="../../../../index.html">Home</fluent-button>
       <fluent-button appearance="accent" as="a" href="../../../../about.html">About</fluent-button>
 
-      <!-- Theme toggle button showing the icon (initially set via JS) -->
-      <button id="themeToggle" aria-label="Toggle Theme" style="background: none; border: none; cursor: pointer; font-size: 1.5rem; margin-left: 1rem;"></button>
+      <!-- Theme toggle button using Fluent Icon Button -->
+      <fluent-icon-button 
+        id="themeToggle" 
+        aria-label="Toggle Theme" 
+        icon="moon" 
+        style="margin-left: 0.5rem;">
+      </fluent-icon-button>
 
-      <!-- External links to X.com and GitHub -->
-      <a href="https://x.com/zerotruster" target="_blank" title="Follow on X" style="margin-left: 1rem; display: inline-block;">
-        <!-- A simple 'X' icon drawn as two crossing lines -->
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="2"/>
-          <line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="2"/>
-        </svg>
+      <!-- Social links with Fluent Icons for X & GitHub -->
+      <a href="https://x.com/zerotruster" target="_blank" title="Follow on X" style="margin-left: 0.5rem; display: inline-block;">
+        <fluent-icon icon="x"></fluent-icon>
       </a>
-      <a href="https://github.com/zerotruster" target="_blank" title="View on GitHub" style="margin-left: 1rem; display: inline-block;">
-        <!-- GitHub logo SVG -->
-        <svg aria-hidden="true" height="24" viewBox="0 0 16 16" version="1.1" width="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 
-               7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 
-               1.08.58 1.23.82.72 1.21 1.87.87 
-               2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
-               0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
-               0 0 .67-.21 2.2.82.64-.18 1.32-.27 
-               2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 
-               2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
-               1.27.82 2.15 0 3.07-1.87 3.75-3.65 
-               3.95.29.25.54.73.54 1.48 0 1.07-.01 
-               1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 
-               0 16 8c0-4.42-3.58-8-8-8z">
-          </path>
-        </svg>
+      <a href="https://github.com/zerotruster" target="_blank" title="View on GitHub" style="margin-left: 0.5rem; display: inline-block;">
+        <fluent-icon icon="github"></fluent-icon>
       </a>
     </nav>
   </header>
@@ -72,7 +90,7 @@
     <p>&copy; <span id="currentTime"></span> Zero Truster.</p>
   </footer>
   
-  <!-- Attach external JavaScript files -->
+  <!-- External JavaScript files: time.js updates the footer; theme.js handles the theme toggle -->
   <script src="../../../../js/time.js"></script>
   <script src="../../../../js/theme.js"></script>
 </body>
