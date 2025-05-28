@@ -15,18 +15,18 @@
     <nav>
       <fluent-button appearance="accent" as="a" href="index.html">Home</fluent-button>
       <fluent-button appearance="accent" as="a" href="about.html">About</fluent-button>
-      <fluent-switch id="themeSwitch">Dark Mode</fluent-switch>
     </nav>
   </header>
   <main class="homepage-main">
     <!-- 2025 Blog Posts -->
     <section class="year-section" id="2025">
       <h2>2025</h2>
-      <div class="blog-posts">
-        <fluent-card as="a" href="posts/2025/may/28/welcome/welcome.html">
-          <h3>Welcome.</h3>
-          <p>A journey into the unheard depths of truth.</p>
-        </fluent-card>
+      <a class="card-link" href="posts/2025/may/28/welcome/welcome.html">
+  <fluent-card>
+    <h3>Welcome.</h3>
+    <p>A journey into the unheard depths of truth.</p>
+  </fluent-card>
+</a>
         <fluent-card as="a" href="posts/2025/may/post2.html">
           <h3>Echoes of Resistance</h3>
           <p>An exploration of defiance and resilience.</p>
@@ -48,6 +48,5 @@
     <p>&copy; <span id="currentTime"></span> zerotruster.com</p>
   </footer>
   <script src="../../../../js/time.js"></script>
-  <script src="../../../../js/theme.js"></script>
 </body>
 </html>
