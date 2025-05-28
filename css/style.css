@@ -83,6 +83,12 @@ a.card-link {
   border-radius: 8px;
 }
 
+.link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; /* or block, depending on your layout needs */
+}
+
 /* Post-specific styles */
 .post-header h2 {
   margin: 0;
